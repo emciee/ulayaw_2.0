@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulayaw | Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'home/images/logo-light.png' %}" type="image/x-icon">
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'mhlblogs/css/styles.css' %}">
+
+    <!-- Google Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="light-theme" bgcolor="white">
+    
+    <header>
+        <div class="container">
+            <nav class="navbar" style="height:90px;">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'home/images/logo-light.png' %}" alt="Ulayaw Logo" class="logo-light" width="100" height="60">
+                    <img src="{% static 'home/images/logo-dark.png' %}" alt="Ulayaw Logo" class="logo-dark" width="100"   height="60" >
+                </a>
+
+                <div class="btn-group">
+                    <button class="theme-btn theme-btn-mobile light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
+
+                    <button class="nav-menu-btn">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="flex-wrapper">
+                    <ul class="desktop-nav">
+                        <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="{% url 'mentalhealthlibrary' %}" class="nav-link">Mental Health Library</a></li>
+                        <li><a href="#" class="nav-link">Chatbot</a></li>
+                        <li><a href="{% url 'lounge' %}" class="nav-link" target="_blank">Lounge</a></li>
+                    </ul>
+
+                    <button class="theme-btn theme-btn-desktop light">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="mobile-nav">
+                    <button class="nav-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                    <div class="wrapper">
+                        <p class="h3 nav-title">Main Menu</p>
+                        <ul>
+                            <li class="nav-item"><a href="{% url 'home' %}" >Home</a></li>
+                            <li class="nav-item"><a href="" >About Us</a></li>
+                            <li class="nav-item"><a href="{% url 'mentalhealthlibrary' %}" >Mental Health Library</a></li>
+                            <li class="nav-item"><a href="{% url 'lounge' %}" >Lounge</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="h3 nav-title">Topics</p>
+                        <ul>
+                            <li class="nav-item">Database</li>
+                            <li class="nav-item">Accessibility</li>
+                            <li class="nav-item">Web Performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}{% endblock content %}
+
+    <footer >
+        <div class="container">
+
+                <div class="wrapper">
+                    <a href="{% url 'home' %}" class="footer-logo">
+                        <img src="{% static 'home/images/logo-light.png' %}" alt="" class="logo-light" width="150">
+                        <img src="{% static 'home/images/logo-dark.png' %}" alt="" class="logo-dark" width="150">
+                    </a>
+
+                    <p class="footer-text">
+                        Learn more about mental health and contact health professionals
+                    </p>
+                </div>
+
+                <div class="wrapper">
+                    <p class="footer-title">
+                        Quick Links
+                    </p>
+
+                    <ul>
+                        <li><a href="{% url 'mentalhealthlibrary' %}" class="footer-link">Mental Health Library</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrapper">
+                    <p class="footer-title">
+                        Legal Stuff
+                    </p>
+
+                    <ul>
+                        <li><a href="#" class="footer-link">Privacy Notice</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">Terms Of Use</a></li>
+                    </ul>
+                </div>
+
+                <p class="copyright" style="font-size:16px;">
+                    &copy; Copyright 2023 <a href="">Ulayaw</a>
+                </p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="{% static 'home/js/script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

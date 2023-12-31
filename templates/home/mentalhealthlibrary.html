@@ -1,0 +1,109 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+<main>
+
+    <div class="main">
+        <h1 class="h2" style="text-align:center;margin-bottom:20px;font-size:30px">Mental Health Library</h1>
+        <div class="container2">
+            <div class="aside">
+                <div class="tags">
+                    <h2 class="h2">Tags</h2>
+                    <div class="wrapper">
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                        <button class="hashtag">#mongodb</button>
+                    </div>
+                </div>
+   
+                <div class="contact">
+                    <h2 class="h2">Our Contacts</h2>
+                    <div class="wrapper">
+                        <p>
+                            Follow our social media links and give our posts likes, comment, and
+                            share them to your friends.
+                        </p>
+
+                        <ul class="social-link">
+                            <li>
+                                <a href="" class="icon-box discord">
+                                    <ion-icon name="logo-discord"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="icon-box instagram">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="icon-box facebook">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="blog">
+                <div class="blog-card-group">
+ 
+                    {% for item in illness %}
+                     <div class="blog-card">
+
+                         <div class="blog-card-banner">
+                             <img src="{{item.main_bg.url}}" alt="" class="blog-banner-img" width = "200px" >
+                         </div>
+ 
+                         <div class="blog-content-wrapper">
+                             <button class="blog-topic text-tiny"></button> 
+      
+                             <h3>
+                                  <a href="{% url 'mhlblogs' item.id %}" class="h3">{{ item.name }}</a>
+                             </h3>
+                             
+                             <p class="blog-text">
+                                  {{item.description}}
+                             </p>
+ 
+                             <div class="wrapper-flex">
+                                 <div class="profile-wrapper">
+                                     <img src="{{item.author_pic.url}}" alt="Authors" height="60px" width="60px">
+                                 </div>
+ 
+                                 <div class="wrapper">
+                                     <a href="" class="h4">{{ item.author }}</a>
+ 
+                                     <p class="text-sm">
+                                         <time datetime="2022-01-17">{{ item.date_created }}</time>
+                                         <span class="separator"></span>
+                                         <ion-icon name="time-outline"></ion-icon>
+                                         <time datetime="PT3M">3 min</time>
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     {% endfor %}
+ 
+                </div>
+ 
+             
+ 
+             </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+{% endblock content %}

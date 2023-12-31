@@ -1,0 +1,256 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="left">
+                    <h1 class="h1">
+                        Welcome to <b>ULAYAW</b>
+                        <br>"Your Mind's Rest"
+                    </h1>
+
+                    <p class="h3">
+                        "Empower Minds, Embrace Wellness: Together, We Prevent the Storms of Mental Health."
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">About Us</a>
+                        <a href="{% url 'lounge' %}" class="btn btn-secondary" target="_blank">Visit Lounge</a>
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <div class="pattern-bg">
+
+                    </div>
+                    <div class="img-box ">
+                        <img src="{% static 'home/images/hero.png'%}" alt="Julia Walker" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+
+
+                <div class="blog">
+                   <h2 class="h2">Ulayaw Offers</h2>
+
+                   <div class="blog-card-group">
+
+                        <div class="blog-card">
+                            <div class="blog-card-banner">
+                                <img src="{% static "home/images/blog-1.png" %}" alt="" class="blog-banner-img" width = "250">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+                                <button class="blog-topic text-tiny"></button> 
+         
+                                <h3>
+                                     <a href="{% url 'mentalhealthlibrary' %}" class="h3">Mental Health Library</a>
+                                </h3>
+                                
+                                <p class="blog-text">
+                                     Browse through the different Mental Health Issues and learn more about them.
+                                     You can also find contacts to mental health professionals.
+                                </p>
+
+                                <div class="wrapper-flex">
+                                    <div class="profile-wrapper">
+                                        <img src="{% static 'home/images/BSUians.png' %}" alt="Authors">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="" class="h4">Team BSUians</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2022-01-17">Jan 17, 2023</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT3M">3 min</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-card-banner">
+                                <img src="{% static "home/images/blog-2.png" %}" alt="" class="blog-banner-img" width = "250">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+                                <button class="blog-topic text-tiny"></button> 
+         
+                                <h3>
+                                     <a href="#" class="h3">Chatbot - Yula</a>
+                                </h3>
+                                
+                                <p class="blog-text">
+                                     Need a friend? A Ka-ulayaw? Then you can talk to our chatbot Yula.
+                                     Ask Yula anything that bothers you in life and maybe she'll have the 
+                                     answers you were looking for.
+                                </p>
+
+                                <div class="wrapper-flex">
+                                    <div class="profile-wrapper">
+                                        <img src="{% static 'home/images/BSUians.png' %}" alt="Authors">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="" class="h4">Team BSUians</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2022-01-17">Jan 17, 2023</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT3M">3 min</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-card-banner">
+                                <img src="{% static "home/images/blog-3.png" %}" alt="" class="blog-banner-img" width = "250">
+                            </div>
+
+                            <div class="blog-content-wrapper">
+                                <button class="blog-topic text-tiny"></button> 
+         
+                                <h3>
+                                     <a href="{% url 'lounge' %}" target="_blank" class="h3">Kaulayaw Lounge</a>
+                                </h3>
+                                
+                                <p class="blog-text">
+                                     Join our Ulayaw Social Networking Site. Post your thoughts, create posts, meet friends,
+                                     and follow others like a typical social networking site. 
+                                </p>
+
+                                <div class="wrapper-flex">
+                                    <div class="profile-wrapper">
+                                        <img src="{% static 'home/images/BSUians.png' %}" alt="Authors">
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <a href="" class="h4">Team BSUians</a>
+
+                                        <p class="text-sm">
+                                            <time datetime="2022-01-17">Jan 17, 2023</time>
+                                            <span class="separator"></span>
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <time datetime="PT3M">3 min</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                   </div>
+
+                
+
+                </div>
+
+                <div class="aside">
+                    <div class="topics">
+                        <h2 class="h2">Mental Health Topics</h2>
+
+                        <a href="" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="folder-outline"></ion-icon>
+                            </div>
+                            <p>Anxiety</p>
+                        </a>
+
+
+                        <a href="" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="folder-outline"></ion-icon>
+                            </div>
+                            <p>Depression</p>
+                        </a>
+
+                        <a href="" class="topic-btn">
+                            <div class="icon-box">
+                                <ion-icon name="folder-outline"></ion-icon>
+                            </div>
+                            <p>PTSD</p>
+                        </a>
+                        
+                    </div>
+
+                    {% comment %} 
+                    <div class="tags">
+                        <h2 class="h2">Tags</h2>
+                        <div class="wrapper">
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#mongodb</button>
+                        </div>
+                    </div> {% endcomment %}
+       
+                    <div class="contact">
+                        <h2 class="h2">Our Contacts</h2>
+                        <div class="wrapper">
+                            <p>
+                                Follow our social media links and give our posts likes, comment, and
+                                share them to your friends.
+                            </p>
+
+                            <ul class="social-link">
+                                <li>
+                                    <a href="" class="icon-box discord">
+                                        <ion-icon name="logo-discord"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="icon-box instagram">
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="icon-box facebook">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="newsletter">
+                        <h2 class="h2">Get Recent Updates!</h2>
+                        <div class="wrapper">
+                            <p>Enter your email to get recent updates about what's going
+                                on with the community.
+                            </p>
+
+                            <form action="#">
+                                <input type="email" name="email" id="" placeholder="Email Address">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    {% endblock content %}
