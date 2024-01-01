@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulayaw | Home</title>
+    <title>Ulayaw </title>
+
+   <!-- Add this script after your existing scripts -->
+    <script>
+        
+    </script>
+
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'home/images/logo-light.png' %}" type="image/x-icon">
@@ -19,7 +25,7 @@
 </head>
 
 
-<body class="light-theme" bgcolor="white">
+<body class="light-theme" >
     
     <header>
         <div class="container">
@@ -30,7 +36,7 @@
                 </a>
 
                 <div class="btn-group">
-                    <button class="theme-btn theme-btn-mobile light">
+                    <button class="theme-btn theme-btn-mobile dark">
                         <ion-icon name="moon" class="moon"></ion-icon>
                         <ion-icon name="sunny" class="sun"></ion-icon>
                     </button>
@@ -43,7 +49,7 @@
                 <div class="flex-wrapper">
                     <ul class="desktop-nav">
                         <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="{% url 'aboutus' %}" class="nav-link">About Us</a></li>
                         <li><a href="{% url 'mentalhealthlibrary' %}" class="nav-link">Mental Health Library</a></li>
                         <li><a href="#" class="nav-link">Chatbot</a></li>
                         <li><a href="{% url 'lounge' %}" class="nav-link" target="_blank">Lounge</a></li>
@@ -64,9 +70,9 @@
                         <p class="h3 nav-title">Main Menu</p>
                         <ul>
                             <li class="nav-item"><a href="{% url 'home' %}" >Home</a></li>
-                            <li class="nav-item"><a href="" >About Us</a></li>
+                            <li class="nav-item"><a href="{% url 'aboutus' %}" >About Us</a></li>
                             <li class="nav-item"><a href="{% url 'mentalhealthlibrary' %}" >Mental Health Library</a></li>
-                            <li class="nav-item"><a href="{% url 'lounge' %}" >Lounge</a></li>
+                            <li class="nav-item"><a href="{% url 'lounge' %}" target="_blank">Lounge</a></li>
                         </ul>
                     </div>
 

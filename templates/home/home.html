@@ -15,7 +15,7 @@
                     </p>
 
                     <div class="btn-group">
-                        <a href="#" class="btn btn-primary">About Us</a>
+                        <a href="{% url 'aboutus' %}" class="btn btn-primary">About Us</a>
                         <a href="{% url 'lounge' %}" class="btn btn-secondary" target="_blank">Visit Lounge</a>
                     </div>
 
@@ -160,27 +160,16 @@
                     <div class="topics">
                         <h2 class="h2">Mental Health Topics</h2>
 
-                        <a href="" class="topic-btn">
+
+                        {% for item in illness%}
+                        <a href="{% url 'mhlblogs' item.id %}" class="topic-btn">
                             <div class="icon-box">
                                 <ion-icon name="folder-outline"></ion-icon>
                             </div>
-                            <p>Anxiety</p>
+                            <p>{{item.name|truncatechars_html:20}}</p>
                         </a>
+                        {% endfor %}
 
-
-                        <a href="" class="topic-btn">
-                            <div class="icon-box">
-                                <ion-icon name="folder-outline"></ion-icon>
-                            </div>
-                            <p>Depression</p>
-                        </a>
-
-                        <a href="" class="topic-btn">
-                            <div class="icon-box">
-                                <ion-icon name="folder-outline"></ion-icon>
-                            </div>
-                            <p>PTSD</p>
-                        </a>
                         
                     </div>
 
