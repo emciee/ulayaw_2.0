@@ -142,6 +142,23 @@
 
 
     <script src="{% static 'home/js/script.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var themeContainer = document.getElementById("themeContainer");
+          var themeToggleBtn = document.getElementById("themeBtn");
+      
+          themeToggleBtn.addEventListener("click", function () {
+            if (themeContainer.classList.contains("light-theme")) {
+              themeContainer.classList.remove("light-theme");
+              themeContainer.classList.add("dark-theme");
+            } else {
+              themeContainer.classList.remove("dark-theme");
+              themeContainer.classList.add("light-theme");
+            }
+          });
+        });
+      </script>
+      
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
